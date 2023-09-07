@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5e5e5;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slackProfilePics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img{
+    width: 200px;
+    border-radius: 50%;
+}
+h3{
+    color: rgb(71, 71, 71);
+    font-weight: 500;
+}
+h3 strong{
+    color: #000;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 data-testid="header">Personal Information</h1>
+        <div data-testid="slackUserName">
+            <h3><strong>Slack Name :</strong> Divine Anesi</h3>
+        </div>
+        <div data-testid="slackDisplayImage" class="slackProfilePics">
+            <h3><strong>Slack Display Picture</strong></h3>
+            <img src="./images//profilepicture.jpg" alt="Divine Anesi"/>
+        </div>
+        <div data-testid="age">
+            <h3><strong>Track :</strong> Frontend</h3>
+        </div>
+        <div data-testid="currentDayOfTheWeek">
+            <h3><strong>Current Day of the Week : </strong> <span id="day"></span></h3>
+        </div>
+        <div data-testid="currentUTCTime">
+            <h3><strong>Current UTC Time :</strong> <span id="time"></span></h3>
+        </div>
+        <div data-testid="githubURL">
+            <h3><strong>GitHub URL :</strong> <a href="https://github.com/PrimoCrypt">https://github.com/PrimoCrypt</a></h>
+        </div>
+    </div>
+
+    <script>
+
+        // Function to update the timestamp in real-time
+        function updateTimestamp() {
+            const timestampElement = document.getElementById('time');
+            const dayElement = document.getElementById('day');
+
+            const currentDate = new Date();
+
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dayOfWeek = daysOfWeek[currentDate.getUTCDay()];
+            const utcTimeInMilliseconds = currentDate.getTime()
+            const formattedTime = currentDate.toLocaleTimeString('en-US', { timeZone: 'UTC', hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' });
+            timestampElement.textContent = utcTimeInMilliseconds;
+            dayElement.textContent = dayOfWeek;
+        }
+
+        // Update the timestamp initially and every second
+        updateTimestamp();
+        setInterval(updateTimestamp, 1000);
+    </script>
+</body>
+</html>
