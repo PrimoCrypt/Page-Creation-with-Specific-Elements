@@ -7,25 +7,25 @@
 </head>
 <body>
     <div class="container">
-        <h1 data-testid="header">Personal Information</h1>
-        <div data-testid="slackUserName">
-            <h3><strong>Slack Name :</strong> Divine Anesi</h3>
+        <h1>Personal Information</h1>
+        <div>
+            <h3><strong>Slack Name :</strong><span data-testid="slackUserName">Divine Anesi</span></h3>
         </div>
-        <div data-testid="slackDisplayImage" class="slackProfilePics">
+        <div class="slackProfilePics">
             <h3><strong>Slack Display Picture</strong></h3>
-            <img src="./images/profilepicture.jpg" alt="Divine Anesi"/>
+            <img data-testid="slackDisplayImage"  src="./images/profilepicture.jpg" alt="Divine Anesi"/>
         </div>
-        <div data-testid="myTrack">
-            <h3><strong>Track :</strong> Frontend</h3>
+        <div>
+            <h3><strong>Track :</strong><span data-testid="myTrack">Frontend</span></h3>
         </div>
-        <div data-testid="currentDayOfTheWeek">
-            <h3><strong>Current Day of the Week : </strong> <span id="day"></span></h3>
+        <div >
+            <h3><strong>Current Day of the Week : </strong> <span  data-testid="currentDayOfTheWeek" id="day"></span></h3>
         </div>
-        <div data-testid="currentUTCTime">
-            <h3><strong>Current UTC Time :</strong> <span id="time"></span></h3>
+        <div>
+            <h3><strong>Current UTC Time :</strong><span data-testid="currentUTCTime" id="time"></span></h3>
         </div>
-        <div data-testid="githubURL">
-            <h3><strong>GitHub URL :</strong> <a href="https://github.com/PrimoCrypt">https://github.com/PrimoCrypt</a></h>
+        <div>
+            <h3><strong>GitHub URL :</strong> <a  data-testid="githubURL" href="https://github.com/PrimoCrypt">https://github.com/PrimoCrypt</a></h>
         </div>
     </div>
 
