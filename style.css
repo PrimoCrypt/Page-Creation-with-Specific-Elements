@@ -25,3 +25,16 @@ h3{
 h3 strong{
     color: #000;
 }
+a{
+    color: rgb(71,71,71);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(3, 13, 117);
+}
+a:active{
+    color: rgb(71,71,71);
+}
+a:focus{
+    color: rgb(255, 60, 60);
+}
